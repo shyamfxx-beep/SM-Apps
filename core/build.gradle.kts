@@ -39,15 +39,15 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
 
     // Supabase
-    implementation(platform(libs.supabase.bom))
-    implementation(libs.supabase.postgrest)
-    implementation(libs.supabase.storage)
-    implementation(libs.supabase.realtime)
-    implementation(libs.supabase.auth)
+    api(platform(libs.supabase.bom))
+    api(libs.supabase.postgrest)
+    api(libs.supabase.storage)
+    api(libs.supabase.realtime)
+    api(libs.supabase.auth)
 
     // Ktor
-    implementation(libs.ktor.client.android)
-    implementation(libs.ktor.client.core)
-    implementation(libs.ktor.client.content.negotiation)
-    implementation(libs.ktor.serialization.kotlinx.json)
+    api(libs.ktor.client.android)
+    api(libs.ktor.client.core)
+    api(libs.ktor.client.content.negotiation)
+    api(libs.ktor.serialization.kotlinx.json)
 }
