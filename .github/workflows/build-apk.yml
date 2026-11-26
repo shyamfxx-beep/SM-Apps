@@ -20,12 +20,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Accept Android SDK Licenses
-        run: yes | sdkmanager --licenses || true
+          cache: 'gradle'
 
       - name: Prepare Keystore from Secrets
         if: env.KEYSTORE_BASE64 != ''
@@ -51,15 +46,10 @@ jobs:
           fi
 
       - name: Grant Execute Permission to Gradle Wrapper
-        run: chmod +x gradlew || true
+        run: chmod +x gradlew
 
       - name: Build Release APKs
-        run: |
-          if [ -f "./gradlew" ]; then
-            ./gradlew assembleRelease --stacktrace
-          else
-            gradle assembleRelease --stacktrace
-          fi
+        run: ./gradlew assembleRelease --stacktrace
 
       - name: Locate and Rename Artifacts
         run: |
