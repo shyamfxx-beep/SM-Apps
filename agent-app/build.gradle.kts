@@ -96,11 +96,11 @@ dependencies {
     implementation(libs.androidx.work.runtime.ktx)
 
     // Play Services Location
-    implementation(libs.play-services.location)
+    implementation(libs.play.services.location)
 
     // Firebase
     implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.messaging-ktx)
+    implementation(libs.firebase.messaging.ktx)
 
     // Coroutines
     implementation(libs.kotlinx.coroutines.android)
