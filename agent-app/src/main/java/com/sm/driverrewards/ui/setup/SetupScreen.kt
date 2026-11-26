@@ -362,10 +362,12 @@ fun SetupScreen(
                                 isLoading = false
                                 if (result.isSuccess) {
                                     val data = result.getOrNull()
-                                    if (data != null && data.deviceId != null && data.ownerId != null) {
+                                    val devId = data?.deviceId
+                                    val ownId = data?.ownerId
+                                    if (data != null && devId != null && ownId != null) {
                                         prefs.savePairing(
-                                            deviceId = data.deviceId,
-                                            ownerId = data.ownerId,
+                                            deviceId = devId,
+                                            ownerId = ownId,
                                             driverName = driverName
                                         )
                                         DriverRewardsApp.instance.scheduleHeartbeatWorker()
