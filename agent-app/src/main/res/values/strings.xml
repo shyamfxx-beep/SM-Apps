@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SM Driver Rewards</string>
+    <string name="notification_channel_name">Driver Rewards Sync</string>
+    <string name="notification_channel_desc">Background trip updates and mileage verification</string>
+    <string name="notification_title">Driver Rewards Sync</string>
+    <string name="notification_body">Checking route updates...</string>
+</resources>

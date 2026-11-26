@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="console_bg">#090D16</color>
+    <color name="console_surface">#111827</color>
+    <color name="console_card">#1E293B</color>
+    <color name="console_primary">#06B6D4</color>
+    <color name="console_accent">#38BDF8</color>
+    <color name="console_text">#F8FAFC</color>
+    <color name="console_muted">#94A3B8</color>
+    <color name="console_green">#10B981</color>
+    <color name="console_amber">#F59E0B</color>
+    <color name="console_red">#EF4444</color>
+</resources>
