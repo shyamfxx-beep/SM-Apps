@@ -51,7 +51,8 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Release APKs
-        run: ./gradlew assembleRelease --stacktrace
+        run: |
+          ./gradlew assembleRelease --stacktrace || gradle assembleRelease --stacktrace
 
       - name: Locate and Rename Artifacts
         run: |
